@@ -1,11 +1,23 @@
-*{
-  margin: 0px;
-  padding: 0px;
+* {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
   user-select: none;
 }
 
-body{
+body {
   background-color: black;
   color: white;
+}
+
+/* WebKit scrollbar styles */
+/* Track */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background-color: rgb(255, 255, 255);
+  border-radius: 6px;
 }

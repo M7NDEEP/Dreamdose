@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import styles from '../styles/Home.module.css';
 import { useState, useEffect } from 'react';
 import Navbar from '@/components/Navbar';
+import Lenis from '@studio-freight/lenis';
 
 export default function App({ Component, pageProps }) {
   const [menuVisible, setMenuVisible] = useState(false);
@@ -49,6 +50,28 @@ export default function App({ Component, pageProps }) {
   // Handlers for text cursor variant
   const textEnter = () => setCursorVariant("text");
   const textLeave = () => setCursorVariant("default");
+
+  useEffect(() => {
+    const lenis = new Lenis({
+      lerp: 0.1,
+    });
+  
+    lenis.on('scroll', (e) => {
+      console.log(e);
+    });
+  
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+  
+    requestAnimationFrame(raf);
+  
+    // Cleanup
+    return () => {
+      lenis.destroy();
+    };
+  }, []);
 
   return (
     <>
