@@ -21,6 +21,8 @@ const about = ({ textEnter, textLeave }) => {
           <h2 onMouseEnter={textEnter} onMouseLeave={textLeave} id='about'>About Us</h2>
           <p onMouseEnter={textEnter} onMouseLeave={textLeave}>Welcome to DreamDose, your gateway to the hauntingly beautiful world of horror. <br />We are thrilled to have you join us on this journey into the unknown, <br /> where nightmares come alive, and the shadows tell tales that will send shivers down your spine.</p>
         </div>
+
+        {/* <div className={styles.gola}></div> */}
       </div>
     </>
   );

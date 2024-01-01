@@ -44,8 +44,12 @@ const Blog = ({ textEnter, textLeave }) => {
 
   return (
     <div id="blogSection" className={styles.blogcont}>
+    <div className={styles.hbackground}>
       <div className={styles.blogheading}>
         <h2>POPULAR BLOGS</h2>
+        <h2>POPULAR BLOGS</h2>
+        <h2>POPULAR BLOGS</h2>
+      </div>
       </div>
 
       <motion.div
